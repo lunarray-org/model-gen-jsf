@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:mg="http://model.lunarray.org/generation/0.9">
+<f:view>
+	<h:body>
+		<h:form id="testForm">
+			<h:selectOneMenu value="#{formTestPB.qualifierString}">
+				<f:selectItems value="#{formTestPB.qualifiers}" />
+			</h:selectOneMenu>
+			<h:commandButton value="Test" action="reloadTable" />
+			<br />
+			<h:messages />
+		</h:form>
+		<mg:generatedTable value="#{formTestPB.elements}" variable="test"
+			model="#{formTestPB.model}" clazz="#{formTestPB.clazz}"
+			outerForm="false" qualifier="#{formTestPB.qualifier}">
+			<f:facet name="rowAction">
+				<mg:action target="#{formTestPB.instance}" />
+			</f:facet>
+			<f:facet name="selectAction">
+				<mg:action target="#{formTestPB.selected}" />
+			</f:facet>
+		</mg:generatedTable>
+		<!--<mg:action target="#{formTestPB.select}" />/<mg:action target="#{formTestPB.selected}" />-->
+	</h:body>
+</f:view>
+</html>

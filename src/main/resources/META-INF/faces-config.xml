@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ * Model Tools.
+ * Copyright (C) 2013 Pal Hargitai (pal@lunarray.org)
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
+	<name>modelgeneration</name>
+
+	<component>
+		<component-type>HtmlGeneratedForm</component-type>
+		<component-class>org.lunarray.model.generation.jsf.components.form.HtmlGeneratedForm</component-class>
+	</component>
+	<render-kit>
+		<renderer>
+			<component-family>org.lunarray.model.generation</component-family>
+			<renderer-type>HtmlGeneratedFormRenderer</renderer-type>
+			<renderer-class>org.lunarray.model.generation.jsf.components.form.HtmlGeneratedFormRenderer</renderer-class>
+		</renderer>
+	</render-kit>
+
+
+	<component>
+		<component-type>HtmlGeneratedTable</component-type>
+		<component-class>org.lunarray.model.generation.jsf.components.table.HtmlGeneratedTable</component-class>
+	</component>
+	<render-kit>
+		<renderer>
+			<component-family>org.lunarray.model.generation</component-family>
+			<renderer-type>HtmlGeneratedTableRenderer</renderer-type>
+			<renderer-class>org.lunarray.model.generation.jsf.components.table.HtmlGeneratedTableRenderer</renderer-class>
+		</renderer>
+	</render-kit>
+
+	<component>
+		<component-type>HtmlAction</component-type>
+		<component-class>org.lunarray.model.generation.jsf.components.shared.action.HtmlAction</component-class>
+	</component>
+	<render-kit>
+		<renderer>
+			<component-family>org.lunarray.model.generation</component-family>
+			<renderer-type>HtmlActionRenderer</renderer-type>
+			<renderer-class>org.lunarray.model.generation.jsf.components.shared.action.HtmlActionRenderer</renderer-class>
+		</renderer>
+	</render-kit>
+
+	<component>
+		<component-type>HtmlFormat</component-type>
+		<component-class>org.lunarray.model.generation.jsf.components.shared.format.HtmlFormat</component-class>
+	</component>
+	<render-kit>
+		<renderer>
+			<component-family>org.lunarray.model.generation</component-family>
+			<renderer-type>HtmlFormatRenderer</renderer-type>
+			<renderer-class>org.lunarray.model.generation.jsf.components.shared.format.HtmlFormatRenderer</renderer-class>
+		</renderer>
+	</render-kit>
+
+	<component>
+		<component-type>HtmlSelectingCheckbox</component-type>
+		<component-class>org.lunarray.model.generation.jsf.components.shared.check.HtmlSelectingCheckbox</component-class>
+	</component>
+	<render-kit>
+		<renderer>
+			<component-family>org.lunarray.model.generation</component-family>
+			<renderer-type>HtmlSelectingCheckboxRenderer</renderer-type>
+			<renderer-class>org.lunarray.model.generation.jsf.components.shared.check.HtmlSelectingCheckboxRenderer</renderer-class>
+		</renderer>
+	</render-kit>
+
+	<converter>
+		<converter-for-class>java.util.Calendar</converter-for-class>
+		<converter-class>org.lunarray.model.generation.jsf.converters.CalendarConverter</converter-class>
+	</converter>
+
+	<converter>
+		<converter-for-class>java.util.Date</converter-for-class>
+		<converter-class>org.lunarray.model.generation.jsf.converters.DateConverter</converter-class>
+	</converter>
+
+	<converter>
+		<converter-for-class>java.sql.Date</converter-for-class>
+		<converter-class>org.lunarray.model.generation.jsf.converters.SqlDateConverter</converter-class>
+	</converter>
+</faces-config>

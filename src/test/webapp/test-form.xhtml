@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:mg="http://model.lunarray.org/generation/0.9">
+<f:view>
+	<h:body>
+		<h:form id="testForm">
+			<h:selectOneMenu value="#{formTestPB.qualifierString}">
+				<f:selectItems value="#{formTestPB.qualifiers}" />
+			</h:selectOneMenu>
+			<h:commandButton value="Test" action="reloadForm" />
+			<mg:generatedForm value="#{formTestPB.instance}" variable="test" model="#{formTestPB.model}" 
+					clazz="#{formTestPB.clazz}" outerForm="true" qualifier="#{formTestPB.qualifier}" id="genForm"
+					messageLocation="bottom" >
+				<h:commandButton value="Save" action="test" />
+			</mg:generatedForm>
+		</h:form>
+	</h:body>
+</f:view>
+</html>
